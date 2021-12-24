@@ -1,0 +1,21 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en" >
+  {% include head.html %}
+  <body>
+    <main role="main">
+	    {% include navigation.html %}
+        {{ content }}
+    </main>
+    <footer>
+        &copy; {{ 'now' | date: "%Y" }} {{ site.title }} - {{ site.description }}
+    </footer>
+  </body>
+</html>
+
+<!--
+Site builded at: {{ 'now' | date: "%F %T" }}
+-->
