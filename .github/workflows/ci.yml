@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Repository checkout
@@ -26,3 +26,18 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           jekyll_src: 'cordiano.com'
           target_branch: 'gh-pages'
+  notify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify on Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_RECIPIENT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          format: markdown
+          message: |
+            Project: *cordiano.com*
+            The `${{ github.event_name }}` event triggered a new `deploy`.
+            Ref: `${{ github.ref }}`
+            Commit: `${{ github.sha }}`
