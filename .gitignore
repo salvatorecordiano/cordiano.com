@@ -1,5 +1,7 @@
 /.idea/
 .DS_Store
 /vendor/
-/.sass-cache/
-/.jekyll-cache/
+/cordiano.com/.sass-cache/
+.jekyll-cache/
+/cordiano.com/docs/
+/cordiano.com/vendor/

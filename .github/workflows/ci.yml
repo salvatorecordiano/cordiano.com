@@ -1,0 +1,28 @@
+name: Deploy cordiano.com
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v2
+      - name: Repository clean
+        run: make pre-deploy
+      - name: Get cached gems
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - name: Build and deploy
+        uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          jekyll_src: 'cordiano.com'
+          target_branch: 'gh-pages'
