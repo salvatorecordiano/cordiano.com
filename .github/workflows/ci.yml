@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Notify on Telegram
+        if: github.event_name == 'push'
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_RECIPIENT_ID }}
