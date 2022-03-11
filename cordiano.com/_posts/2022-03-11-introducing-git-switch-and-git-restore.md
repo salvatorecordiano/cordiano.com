@@ -30,7 +30,7 @@ These two completely different purposes could lead to confusion, so Git develope
 In fact, Git 2.23 release [introduces](https://github.com/git/git/blob/master/Documentation/RelNotes/2.23.0.txt) the `git switch` and `git restore` commands.
 It is clearer how to switch/create branches and restore files with two different commands.
 
-**Disclaimer**: `git switch` and `git restore` are still marked as experimental on docs. Their behavior may change.
+**Disclaimer**: `git switch` and `git restore` are still marked as experimental on the docs. Their behavior may change.
 
 But let's go deeper with both commands.
 
@@ -69,7 +69,7 @@ git restore filename1.ext filename2.ext
 git restore .
 ```
 
-The restore command will take the contents from `HEAD` by default. You can change this behavior, as shown in the following example.
+The restore command will take the contents from `HEAD` by default. You can change this behavior, as shown in the following examples.
 
 ```
 # restore filename.ext from the commit with hash 049c0bb432
