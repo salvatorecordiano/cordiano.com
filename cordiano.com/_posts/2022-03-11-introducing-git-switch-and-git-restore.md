@@ -88,7 +88,7 @@ $ git restore --worktree filename.ext
 
 The last command does two things:
 
-- revert your working copy to HEAD
-- unstage previously staged work
+- revert your working copy to HEAD;
+- unstage previously staged work.
 
 That's all Folks!
