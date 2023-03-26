@@ -13,6 +13,6 @@ He hires and builds highly skilled and highly-performing engineering teams, and 
 
 He builds and influences a culture of ownership, empathy, and inclusivity, not only within his teams but also within the whole engineering department.
 
-Salvatore has a proven experience of working efficiently, end-to-end, with cross-teams. He partners with Product, Design, Data Science, and DevOps people to build and deliver product roadmaps incrementally, effectively, and with a high level of quality.
+Salvatore has a proven experience of working efficiently, end-to-end, with cross-teams. He partners with Product, Design, Data Science, Marketing and DevOps people to build and deliver product roadmaps incrementally, effectively, and with a high level of quality.
 
 He has a deep understanding of Web technologies and DevOps tools, such as PHP, Symfony, Node.js, Docker, Git, CI/CD pipelines, and Kubernetes.
