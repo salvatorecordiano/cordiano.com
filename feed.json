@@ -1,0 +1,68 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Salvatore Cordiano",
+    "home_page_url": "https://cordiano.com/",
+    "feed_url": "https://cordiano.com/feed.json",
+    "description": "Engineering Manager",
+    "icon": "https://cordiano.com/apple-touch-icon.png",
+    "favicon": "https://cordiano.com/favicon.ico",
+    "expired": false,
+    
+    "author":  {
+        "name": "Salvatore Cordiano",
+        "url": "https://cordiano.com",
+        "avatar": null
+    },
+    
+"items": [
+    
+        {
+            "id": "https://cordiano.com/2022/03/11/introducing-git-switch-and-git-restore",
+            "title": "Introducing git switch and git restore",
+            "summary": "git switch and git restore are valid alternatives to the overused git checkout command",
+            "content_text": "When you work with Git using the command line, you know the git checkout command for sure.git checkout command is the overused command, and it does many things. We mainly use git checkout to switch or create new branches and restore files in the working tree.Let’s see some examples of usages.# switch to an existing branch$ git checkout &lt;existing_branch&gt;# create and switch to a new branch$ git checkout -b &lt;new_branch&gt;# restore filename.ext from the indexgit checkout filename.extThese two completely different purposes could lead to confusion, so Git developers have taken this into account.In fact, Git 2.23 release introduces the git switch and git restore commands.It is clearer how to switch/create branches and restore files with two different commands.Disclaimer: git switch and git restore are still marked as experimental on the docs. Their behavior may change.But let’s go deeper with both commands.git switch in action# switch to an existing branch$ git switch &lt;existing_branch&gt;# create and switch to a new branch$ git switch -c &lt;new_branch&gt;# switch to the previous branch$ git switch -git restore in actiongit restore is used to revert non-committed changes:  changes in the working copy;  content in the index (also called staging area).# discard the local changes of filename1.ext and filename2.extgit restore filename1.ext filename2.ext# discard all local changesgit restore .The restore command will take the contents from HEAD by default. You can change this behavior, as shown in the following examples.# restore filename.ext from the commit with hash 049c0bb432git restore --source 049c0bb432 filename.ext# restore filename.ext from 2 commits before # the current tip of the master branchgit restore --source master~2 filename.extYou can restore the index and the working tree using the --worktree option.$ git restore --worktree filename.extThe last command does two things:  revert your working copy to HEAD;  unstage previously staged work.That’s all Folks!",
+            "content_html": "<p>When you work with Git using the command line, you know the <code>git checkout</code> command for sure.</p><p><code>git checkout</code> command is the overused command, and it does many things. We mainly use <code>git checkout</code> to switch or create new branches and restore files in the working tree.</p><p>Let’s see some examples of usages.</p><pre><code># switch to an existing branch$ git checkout &lt;existing_branch&gt;# create and switch to a new branch$ git checkout -b &lt;new_branch&gt;</code></pre><pre><code># restore filename.ext from the indexgit checkout filename.ext</code></pre><p>These two completely different purposes could lead to confusion, so Git developers have taken this into account.In fact, Git 2.23 release <a href=\"https://github.com/git/git/blob/master/Documentation/RelNotes/2.23.0.txt\">introduces</a> the <code>git switch</code> and <code>git restore</code> commands.It is clearer how to switch/create branches and restore files with two different commands.</p><p><strong>Disclaimer</strong>: <code>git switch</code> and <code>git restore</code> are still marked as experimental on the docs. Their behavior may change.</p><p>But let’s go deeper with both commands.</p><h2 id=\"git-switch-in-action\">git switch in action</h2><pre><code># switch to an existing branch$ git switch &lt;existing_branch&gt;</code></pre><pre><code># create and switch to a new branch$ git switch -c &lt;new_branch&gt;</code></pre><pre><code># switch to the previous branch$ git switch -</code></pre><h2 id=\"git-restore-in-action\">git restore in action</h2><p><code>git restore</code> is used to revert non-committed changes:</p><ul>  <li>changes in the working copy;</li>  <li>content in the index (also called staging area).</li></ul><pre><code># discard the local changes of filename1.ext and filename2.extgit restore filename1.ext filename2.ext</code></pre><pre><code># discard all local changesgit restore .</code></pre><p>The restore command will take the contents from <code>HEAD</code> by default. You can change this behavior, as shown in the following examples.</p><pre><code># restore filename.ext from the commit with hash 049c0bb432git restore --source 049c0bb432 filename.ext# restore filename.ext from 2 commits before # the current tip of the master branchgit restore --source master~2 filename.ext</code></pre><p>You can restore the index and the working tree using the <code>--worktree</code> option.</p><pre><code>$ git restore --worktree filename.ext</code></pre><p>The last command does two things:</p><ul>  <li>revert your working copy to HEAD;</li>  <li>unstage previously staged work.</li></ul><p>That’s all Folks!</p>",
+            "url": "https://cordiano.com/2022/03/11/introducing-git-switch-and-git-restore",
+            
+            
+            
+            
+            
+            "date_published": "2022-03-11T08:07:58+00:00",
+            "date_modified": "2022-03-11T08:07:58+00:00",
+            
+                "author":  {
+                "name": "Salvatore Cordiano",
+                "url": "https://cordiano.com",
+                "avatar": null
+                }
+                
+            
+        },
+    
+        {
+            "id": "https://cordiano.com/2021/12/24/a-gift-for-xmas-2021",
+            "title": "A gift for Xmas 2021",
+            "summary": "This is a musical gift for Christmas 2021",
+            "content_text": "Today I want to share with my readers the Ludovico Einaudi Concert playlist.Have a moment to yourself, take an hour to listen to this music, and enjoy.  Listen on YouTube  Listen on SpotifyHappy Xmas 2021!",
+            "content_html": "<p>Today I want to share with my readers the <strong>Ludovico Einaudi</strong> Concert playlist.</p><p>Have a moment to yourself, take an hour to listen to this music, and enjoy.</p><ul>  <li>Listen on <a href=\"https://sprc.it/_3eiIfsb\">YouTube</a></li>  <li>Listen on <a href=\"https://sprc.it/_32uQMFW\">Spotify</a></li></ul><p>Happy Xmas 2021!</p>",
+            "url": "https://cordiano.com/2021/12/24/a-gift-for-xmas-2021",
+            
+            
+            
+            
+            
+            "date_published": "2021-12-24T10:23:14+00:00",
+            "date_modified": "2021-12-24T10:23:14+00:00",
+            
+                "author":  {
+                "name": "Salvatore Cordiano",
+                "url": "https://cordiano.com",
+                "avatar": null
+                }
+                
+            
+        }
+    
+    ]
+}
