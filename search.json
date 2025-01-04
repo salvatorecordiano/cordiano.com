@@ -1,0 +1,25 @@
+[
+  
+    {
+
+      "title"    : "Introducing git switch and git restore",
+      "description" : "git switch and git restore are valid alternatives to the overused git checkout command",
+      "url"      : "/2022/03/11/introducing-git-switch-and-git-restore",
+      "category" : "",
+      "tags"     : "git",
+      "date"     : "2022-03-11 08:07:58 +0000"
+
+    } ,
+  
+    {
+
+      "title"    : "A gift for Xmas 2021",
+      "description" : "This is a musical gift for Christmas 2021",
+      "url"      : "/2021/12/24/a-gift-for-xmas-2021",
+      "category" : "",
+      "tags"     : "gift",
+      "date"     : "2021-12-24 10:23:14 +0000"
+
+    } 
+  
+]

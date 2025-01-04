@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Salvatore Cordiano</title>
+ <link href="https://cordiano.com/atom.xml" rel="self"/>
+ <link href="https://cordiano.com/"/>
+ <updated>2025-01-04T02:51:15+00:00</updated>
+ <id>https://cordiano.com</id>
+ <author>
+   <name>Salvatore Cordiano</name>
+   <email>salvatore@cordiano.it</email>
+ </author>
+
+ 
+ <entry>
+   <title>Introducing git switch and git restore</title>
+   <link href="https://cordiano.com/2022/03/11/introducing-git-switch-and-git-restore"/>
+   <updated>2022-03-11T08:07:58+00:00</updated>
+   <id>https://cordiano.com/2022/03/11/introducing-git-switch-and-git-restore</id>
+   <content type="html">&lt;p&gt;When you work with Git using the command line, you know the &lt;code&gt;git checkout&lt;/code&gt; command for sure.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git checkout&lt;/code&gt; command is the overused command, and it does many things. We mainly use &lt;code&gt;git checkout&lt;/code&gt; to switch or create new branches and restore files in the working tree.&lt;/p&gt;
+
+&lt;p&gt;Let’s see some examples of usages.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# switch to an existing branch
+$ git checkout &amp;lt;existing_branch&amp;gt;
+
+# create and switch to a new branch
+$ git checkout -b &amp;lt;new_branch&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# restore filename.ext from the index
+git checkout filename.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These two completely different purposes could lead to confusion, so Git developers have taken this into account.
+In fact, Git 2.23 release &lt;a href=&quot;https://github.com/git/git/blob/master/Documentation/RelNotes/2.23.0.txt&quot;&gt;introduces&lt;/a&gt; the &lt;code&gt;git switch&lt;/code&gt; and &lt;code&gt;git restore&lt;/code&gt; commands.
+It is clearer how to switch/create branches and restore files with two different commands.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: &lt;code&gt;git switch&lt;/code&gt; and &lt;code&gt;git restore&lt;/code&gt; are still marked as experimental on the docs. Their behavior may change.&lt;/p&gt;
+
+&lt;p&gt;But let’s go deeper with both commands.&lt;/p&gt;
+
+&lt;h2 id=&quot;git-switch-in-action&quot;&gt;git switch in action&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;# switch to an existing branch
+$ git switch &amp;lt;existing_branch&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# create and switch to a new branch
+$ git switch -c &amp;lt;new_branch&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# switch to the previous branch
+$ git switch -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;git-restore-in-action&quot;&gt;git restore in action&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;git restore&lt;/code&gt; is used to revert non-committed changes:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;changes in the working copy;&lt;/li&gt;
+  &lt;li&gt;content in the index (also called staging area).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;# discard the local changes of filename1.ext and filename2.ext
+git restore filename1.ext filename2.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# discard all local changes
+git restore .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The restore command will take the contents from &lt;code&gt;HEAD&lt;/code&gt; by default. You can change this behavior, as shown in the following examples.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# restore filename.ext from the commit with hash 049c0bb432
+git restore --source 049c0bb432 filename.ext
+
+# restore filename.ext from 2 commits before 
+# the current tip of the master branch
+git restore --source master~2 filename.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can restore the index and the working tree using the &lt;code&gt;--worktree&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git restore --worktree filename.ext
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The last command does two things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;revert your working copy to HEAD;&lt;/li&gt;
+  &lt;li&gt;unstage previously staged work.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s all Folks!&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>A gift for Xmas 2021</title>
+   <link href="https://cordiano.com/2021/12/24/a-gift-for-xmas-2021"/>
+   <updated>2021-12-24T10:23:14+00:00</updated>
+   <id>https://cordiano.com/2021/12/24/a-gift-for-xmas-2021</id>
+   <content type="html">&lt;p&gt;Today I want to share with my readers the &lt;strong&gt;Ludovico Einaudi&lt;/strong&gt; Concert playlist.&lt;/p&gt;
+
+&lt;p&gt;Have a moment to yourself, take an hour to listen to this music, and enjoy.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Listen on &lt;a href=&quot;https://sprc.it/_3eiIfsb&quot;&gt;YouTube&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Listen on &lt;a href=&quot;https://sprc.it/_32uQMFW&quot;&gt;Spotify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Happy Xmas 2021!&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
